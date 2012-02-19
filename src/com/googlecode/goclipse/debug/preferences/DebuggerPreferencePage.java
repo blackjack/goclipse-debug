@@ -8,6 +8,7 @@ import org.eclipse.jface.layout.GridLayoutFactory;
 import org.eclipse.jface.preference.FieldEditorPreferencePage;
 import org.eclipse.jface.preference.FileFieldEditor;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.ui.IWorkbench;
@@ -50,6 +51,8 @@ public class DebuggerPreferencePage extends FieldEditorPreferencePage implements
     //gdbFileFieldEditor.setValidateStrategy(StringFieldEditor.VALIDATE_ON_KEY_STROKE);
     
     addField(gdbFileFieldEditor);
+    
+    ((GridData)gdbFileFieldEditor.getTextControl(fieldParent).getLayoutData()).widthHint = 150;
   }
 
 }
